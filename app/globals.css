@@ -5,11 +5,26 @@
   --foreground: #171717;
 }
 
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
 
 .icon-bg-blue{
   @apply w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-300 transition-colors  
 }
 
 .tooltip{
-  @apply absolute p-2 rounded-sm shadow-2xl shadow-blue-500 hidden group-hover:block top-13 -left-1/4 text-center bg-blue-800 text-white font-bold  
+  @apply absolute p-2 rounded-sm shadow-lg shadow-blue-300 hidden group-hover:block top-13 -left-0 z-10 text-center bg-blue-800 text-white font-bold  
+}
+
+
+.hover-border-gray:hover{
+  @apply border border-gray-300 shadow-[0px_3px_13px_1px_gray]
 }
